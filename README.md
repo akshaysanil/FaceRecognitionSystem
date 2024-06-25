@@ -70,6 +70,7 @@ To get started with the Face Attendance System, follow these steps:
    - Also every details will save inside *current_date.csv* with *name,unique_id,timestamp,hyperlink* for **Admin**.
 
 ## Demo
+![image](https://github.com/akshaysanil/FaceRecognitionSystem/assets/104578088/781c97b0-a554-4c4f-84cd-0bb60097b1bf)
 
 Check out the demo video to see the Face Attendance System in action:
 
