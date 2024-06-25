@@ -61,7 +61,7 @@ To get started with the Face Attendance System, follow these steps:
 
 3. **Run the system**:
     ```sh
-    python main.py
+    python yolo_with_main.py
     ```
 
 4. **Monitor the entry and exit cameras**:
@@ -73,7 +73,7 @@ To get started with the Face Attendance System, follow these steps:
 
 Check out the demo video to see the Face Attendance System in action:
 
-![Demo Video](/home/akshay/work/mysur_tests/machineTest1/face_recognition_system/result_datas/result_harshitha.mp4)
+![Demo Video](https://github.com/akshaysanil/FaceRecognitionSystem/blob/main/result_harshitha.mp4)
 
 ## Contributing
 
