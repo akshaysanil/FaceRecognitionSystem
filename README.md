@@ -39,7 +39,7 @@ To get started with the Face Attendance System, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    [git clone https://github.com/your-username/face-attendance-system.git](https://github.com/akshaysanil/FaceRecognitionSystem.git)
+    [git clone https://github.com/akshaysanil/FaceRecognitionSystem.git]
     cd face-attendance-system
     ```
 
