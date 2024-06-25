@@ -71,10 +71,10 @@ To get started with the Face Attendance System, follow these steps:
 
 ## Demo
 ![image](https://github.com/akshaysanil/FaceRecognitionSystem/assets/104578088/781c97b0-a554-4c4f-84cd-0bb60097b1bf)
+![image](https://github.com/akshaysanil/FaceRecognitionSystem/assets/104578088/fd87c70c-6337-44b9-873b-0ab1d8288b45)
 
-Check out the demo video to see the Face Attendance System in action:
 
-![Demo Video](https://github.com/akshaysanil/FaceRecognitionSystem/blob/main/result_harshitha.mp4)
+Check out the demo video to see the Face Attendance System in action:![Demo Video](https://github.com/akshaysanil/FaceRecognitionSystem/blob/main/result_harshitha.mp4)
 
 ## Contributing
 
