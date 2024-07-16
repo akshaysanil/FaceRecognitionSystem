@@ -57,26 +57,31 @@ To get started with the Face Attendance System, follow these steps:
 ## Usage
 
 1. **Register a new person**:
-   - Start making newdataset and use
+   - Create newdataset and use
+        - Dataset/emoplyee1/image1.jpg,image2.jpg
+        - Dataset/emoplyee2/image1.jpg,image2.jpg
+
 
 3. **Run the system**:
     ```sh
-    python yolo_with_main.py
+    python main.py
     ```
-
 4. **Monitor the entry and exit cameras**:
    - The system will automatically detect, track, and recognize faces, marking attendance in the process.
    - All the marked attandence face-crop will save inside the *current_date* folder(it will create everyday) with the current timestamp.
    - Also every details will save inside *current_date.csv* with *name,unique_id,timestamp,hyperlink* for **Admin**.
 
 ## Demo
+
+
 ![image](https://github.com/akshaysanil/FaceRecognitionSystem/assets/104578088/781c97b0-a554-4c4f-84cd-0bb60097b1bf)
 ![image](https://github.com/akshaysanil/FaceRecognitionSystem/assets/104578088/fd87c70c-6337-44b9-873b-0ab1d8288b45)
 
+### Demo video
+Check out the demo video to see the Face Attendance System in action:
+![](https://github.com/akshaysanil/FaceRecognitionSystem/blob/master/demo.jpg)
 
-Check out the demo video to see the Face Attendance System in action:![Demo Video](https://github.com/akshaysanil/FaceRecognitionSystem/blob/main/result_harshitha.mp4)
-
-## Contributing
+## Contributions 
 
 Contributions are welcome! Please follow these steps:
 
