@@ -15,10 +15,10 @@ embedder = FaceNet()
 
 # Load the new classifier model
 # with open('svm_models/yoloCropSvmModel160x160.pkl', 'rb') as f:
-with open('svm_models/new_classifier_Jun27_759.pkl', 'rb') as f:
+with open('facenet_models/new_classifier_Jun27_759.pkl', 'rb') as f:
     model = pickle.load(f)
     labels = model[1] # it will give the labels list no need to add anything
-    print('registered empolyees >>>>>>>>>>>>>>>>>>> :', model[1])
+    print('Registered empolyees >>>>>>>>>>>>>>>>>>> :', model[1])
 
 
 # Re-encode the labels
@@ -55,10 +55,10 @@ def predict_face(face_image):
    
     # Taking index and highest probability
     probabilities = ypreds_probability_list[0]
-    print('Probabilities >>>>>>>>>>>>>>>>>>> : ', probabilities)
+    # print('Probabilities >>>>>>>>>>>>>>>>>>> : ', probabilities)
     
     highest_probability = max(probabilities)
-    print('Highest probability >>>>>>>>>>>>>>>>>>> :', highest_probability)
+    # print('Highest probability >>>>>>>>>>>>>>>>>>> :', highest_probability)
 
     # Assigning result probability
     result_probability = highest_probability

@@ -1032,9 +1032,9 @@ class LabelAnnotator:
 
             # print('detection idx >>>>>>>>>>>>>>>>>>> : ',detection_idx)
             # print('labels >>>>>>>>>>>>>>>>>>> :  ',labels)
-            print('Highest probability index >>>>>>>>>>>>>>>>>>> : ',result_probability[detection_idx])
-            
-            if result_probability[detection_idx] >=0.87 and text_from_facenet is not None:
+            # print('Highest probability taking using index)
+            highest_probability_value = result_probability[detection_idx]
+            if highest_probability_value >=0.87 and text_from_facenet is not None:
 
                 # print('result_probability >>>>>>>>>>>>>>>>>>> : ',result_probability)
                 # print('text from facenet >>>>>>>>>>>>>>>>>>> : ',text_from_facenet)
@@ -1072,8 +1072,9 @@ class LabelAnnotator:
                 color=color.as_bgr(),
                 border_radius=self.border_radius,
             )
-            # cv2.imshow('live detections ',scene)
-            print('final label after all preprocessing >>>>>>>>>>>>>> : ',text)
+
+            print(f"Recognised Employee is {text} with {highest_probability_value:.2f}% accuracy")
+
             cv2.putText(
                 img=scene,
                 text=text,
