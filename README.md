@@ -39,13 +39,13 @@ To get started with the Face Attendance System, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    [git clone https://github.com/akshaysanil/FaceRecognitionSystem.git]
-    cd face-attendance-system
+    git clone https://github.com/akshaysanil/FaceRecognitionSystem.git
+    cd FaceRecognitionSystem
     ```
 
 2. **Install the required dependencies**:
     ```sh
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
 
 3. **Download pre-trained models**:
