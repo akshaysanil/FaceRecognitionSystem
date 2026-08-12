@@ -144,6 +144,8 @@ print('accuracy_score(Y_test,ypreds_test) : ',accuracy_score(Y_test,ypreds_test)
 
 
 import pickle
-#save the model
-with open('svm_model_160x160_Office_mysr.pkl','wb') as f:
-    pickle.dump(model,f)
+# Save as (classifier, labels) — this is the format facenet_files/facent_svm_rec_passing.py
+# (the module main.py loads for inference) expects: it does `labels = model[1]` after
+# unpickling, which fails with a bare classifier.
+with open('facenet_models/new_classifier_Jun27_759.pkl','wb') as f:
+    pickle.dump((model, list(encoder.classes_)),f)
