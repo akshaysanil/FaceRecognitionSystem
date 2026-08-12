@@ -148,12 +148,3 @@ sv.process_video(
     target_path="result_datas/testig_video_result.mp4",
     callback=callback
 )
-
-#testing gradio
-
- 
-# ------------------------------- core file edited in this path -------------------------------------------
-# /home/akshay/anaconda3/envs/py38/lib/python3.8/site-packages/supervision/annotators/core.py
-# rtsp://admin:Ashlesha123@192.168.0.170
-# conda : py38new
-# run python3 yolo_with_facenet_main.py
