@@ -82,6 +82,9 @@ def process_rtsp_stream(rtsp_url: str):
     cap.release()
     cv.destroyAllWindows()
 
-# Replace 'your_rtsp_stream_url' with your actual RTSP stream URL
-rtsp_stream_url = 'rtsp://admin:Ashlesha123@192.168.0.170'
+# Set the RTSP_STREAM_URL environment variable to your camera's stream URL,
+# e.g. rtsp://<user>:<password>@<camera-ip>
+rtsp_stream_url = os.getenv('RTSP_STREAM_URL')
+if not rtsp_stream_url:
+    raise SystemExit('Set the RTSP_STREAM_URL environment variable before running this script.')
 process_rtsp_stream(rtsp_stream_url)

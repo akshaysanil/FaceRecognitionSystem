@@ -13,7 +13,7 @@ import time
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load YOLO model
-model = YOLO("/home/akshay/Downloads/yolov8n-face.pt")
+model = YOLO("yolo_models/yolov8n-face.pt")
 
 # Initialize tracker and annotators
 tracker = sv.ByteTrack()
@@ -42,7 +42,7 @@ def callback(frame: np.ndarray, frame_id: int) -> np.ndarray:
         x1, y1, x2, y2 = map(int, detection[:4])
         face = frame[y1:y2, x1:x2]
         logging.info('Getting face for recognition')
-        facenet_result = predict_face(face)
+        facenet_result, _ = predict_face(face)
         name = facenet_result
         
         timestamp = datetime.now().strftime('%Y_%m_%d_%H:%M:%S')
@@ -63,8 +63,14 @@ def callback(frame: np.ndarray, frame_id: int) -> np.ndarray:
         annotated_frame, detections=detections, labels=labels, text_from_facenet=facenet_results)
 
 # Start video stream from IP camera
+# Set the RTSP_STREAM_URL environment variable to your camera's stream URL,
+# e.g. rtsp://<user>:<password>@<camera-ip>
+rtsp_stream_url = os.getenv('RTSP_STREAM_URL')
+if not rtsp_stream_url:
+    raise SystemExit('Set the RTSP_STREAM_URL environment variable before running this script.')
+
 logging.info('Starting video stream...')
-vidObj = VideoStream('rtsp://admin:Ashlesha123@192.168.0.170').start()
+vidObj = VideoStream(rtsp_stream_url).start()
 time.sleep(2.0)  # Allow camera to warm up
 
 # Get frame size information
@@ -78,7 +84,7 @@ fps = 20  # Frames per second
 out = cv2.VideoWriter(output_path, fourcc, fps, (frame_width, frame_height))
 
 if not vidObj.stream.isOpened():
-    logging.error('Unable to open video stream: rtsp://admin:Ashlesha123@192.168.0.170')
+    logging.error(f'Unable to open video stream: {rtsp_stream_url}')
 else:
     logging.info('Successfully opened video stream')
 
